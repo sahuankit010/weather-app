@@ -11,9 +11,16 @@ const forecast = (address, callback) => {
         else {
             const outsideTemp = body.current.temperature
             const feelsLike = body.current.feelslike
+            const pressure = body.current.pressure
+            const humidity = body.current.humidity
+            const precipitation = body.current.precip
             callback(undefined,{
-                outsideTemp: outsideTemp, feelsLike: feelsLike,
-                description: body.current.weather_descriptions[0]
+                outsideTemp: outsideTemp,
+                feelsLike: feelsLike,
+                pressure: pressure,
+                humidity: humidity,
+                precipitation: precipitation,
+                description: body.current.weather_descriptions[0],
             })
         }
     })

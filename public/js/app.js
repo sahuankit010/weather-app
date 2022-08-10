@@ -19,7 +19,10 @@ weatherForm.addEventListener('submit', (e) => {
             } else {
                 messageOne.textContent = ''
                 messageTwo.textContent = data.location + ' temperature is ' +
-                                        data.forecast.outsideTemp + ' degrees Celcius' 
+                                        data.forecast.outsideTemp + ' degrees celcius,' +
+                                         ' humidity is '+ data.forecast.humidity + ', chance of rain is ' 
+                                         + data.forecast.precipitation + ', and pressure is ' 
+                                         + data.forecast.pressure + '.'
             }
         })
     })
